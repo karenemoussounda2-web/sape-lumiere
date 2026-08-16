@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Festival Sape et Lumière</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header" id="siteHeader">
+      <div class="header-inner">
+        <a href="#accueil" class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-text">Sape<em>&</em>Lumière</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-expanded="false"
+          aria-controls="primaryNav"
+          aria-label="Ouvrir le menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="primary-nav" id="primaryNav">
+          <a href="#programme" class="nav-link">Programme</a>
+          <a href="#lineup" class="nav-link">Line-up</a>
+          <a href="#billetterie" class="nav-link">Pass</a>
+          <a href="#partenaires" class="nav-link">Partenaires</a>
+          <a href="#faq" class="nav-link">FAQ</a>
+          <a href="#contact" class="nav-link nav-cta">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero" id="accueil">
+        <div class="hero-rays" aria-hidden="true"></div>
+        <div class="hero-inner">
+          <p class="eyebrow">Brazzaville · 3 jours · Entrée par réservation</p>
+          <h1 class="hero-title">
+            Sape <span class="amp">&amp;</span> Lumière
+          </h1>
+          <p class="hero-sub">
+            L'élégance de la Sape, la musique en plein air et des installations
+            lumineuses dans les rues de Brazzaville.
+          </p>
+          <p class="hero-dates">11 — 13 Septembre 2026</p>
+
+          <div class="countdown" id="countdown" aria-live="polite">
+            <div class="countdown-unit">
+              <span class="countdown-value" id="cd-days">00</span>
+              <span class="countdown-label">jours</span>
+            </div>
+            <div class="countdown-sep" aria-hidden="true">:</div>
+            <div class="countdown-unit">
+              <span class="countdown-value" id="cd-hours">00</span>
+              <span class="countdown-label">heures</span>
+            </div>
+            <div class="countdown-sep" aria-hidden="true">:</div>
+            <div class="countdown-unit">
+              <span class="countdown-value" id="cd-minutes">00</span>
+              <span class="countdown-label">min</span>
+            </div>
+            <div class="countdown-sep" aria-hidden="true">:</div>
+            <div class="countdown-unit">
+              <span class="countdown-value" id="cd-seconds">00</span>
+              <span class="countdown-label">sec</span>
+            </div>
+          </div>
+          <p class="countdown-caption" id="countdownCaption">
+            avant l'ouverture, vendredi 18h
+          </p>
+
+          <div class="hero-actions">
+            <a href="#billetterie" class="btn btn-primary">Voir les pass</a>
+            <a href="#programme" class="btn btn-ghost">Voir le programme</a>
+          </div>
+        </div>
+      </section>
+
+  
+      <section class="section" id="programme">
+        <div class="section-inner">
+          <p class="section-eyebrow">Le programme</p>
+          <h2 class="section-titre">Trois soirs, trois ambiances</h2>
+
+          <div class="tabs" role="tablist" aria-label="Jours du festival">
+            <button
+              class="tab"
+              role="tab"
+              aria-selected="true"
+              aria-controls="jour-vendredi"
+              id="tab-vendredi"
+              data-day="vendredi"
+            >
+              Vendredi
+            </button>
+            <button
+              class="tab"
+              role="tab"
+              aria-selected="false"
+              aria-controls="jour-samedi"
+              id="tab-samedi"
+              data-day="samedi"
+            >
+              Samedi
+            </button>
+            <button
+              class="tab"
+              role="tab"
+              aria-selected="false"
+              aria-controls="jour-dimanche"
+              id="tab-dimanche"
+              data-day="dimanche"
+            >
+              Dimanche
+            </button>
+          </div>
+
+          <div class="tab-panels" id="tabPanels"></div>
+        </div>
+      </section>
+
+      
+      <section id="lineup" >
+        <div class="section-inner">
+          <h2 class="section-titre">Artistes &amp; Sapeur</h2>
+        
+        
+          <div class="lineup-grid">
+
+            <article class="artiste-carte">
+              <div class="artiste-photo">
+                <img src="background.png" alt="image"
+                >
+              </div>
+
+              <div class="artiste-info">
+                 <p >Wilson Penza</p>
+                 <p >Sapeurs </p>
+              </div>
+            </article>
+          
+            <article class="artiste-carte">
+            <div class="artiste-photo">
+              <img src="background.png" alt="image"
+              >
+              </div>
+
+              <div class="artiste-info">
+                 <p >Wilson Penza</p>
+                 <p >Sapeurs </p>
+              </div>
+            </article>
+            
+
+            <article class="artiste-carte">
+            <div class="artiste-photo">
+              <img src="background.png" alt="image"
+              >
+            </div>
+
+              <div class="artiste-info">
+                 <p>Karène Legrand</p>
+                 <p>Artiste </p>
+              </div>
+            
+            </article>
+            
+            <article class="artiste-carte">
+            <div class="artiste-photo">
+              <img src="background.png" alt="image"
+              >
+            </div>
+
+              <div class="artiste-info">
+                 <p>Karène Legrand</p>
+                 <p>Artiste </p>
+              </div>
+            </div>
+            </article>
+          </div> 
+        </div>
+      </section>
+
+      <section class="section" id="billetterie">
+        
+          <p class="section-eyebrow">Informations pratiques</p>
+          <h2 class="section-titre">Réservez votre place</h2>
+          <p class="section-note">Pas de billetterie en ligne cette année — la réservation se fait directement par WhatsApp.</p>
+
+          <div class="pass-grid">
+            <article class="pass-carte">
+              <p class="pass-name">Pass 1 Jour</p>
+              <p class="pass-prix">5 000 <span> FCFA</span></p>
+              <p class="pass-desc">Accès à une journée de votre choix : un seul defilé, une seule soirée et peu d'ambiance</p>
+              <a class="btn btn-whatsapp" id="wa-pass-1" href="#" target="_blank" rel="noopener">Réserver via WhatsApp</a>
+            </article>
+
+            <article class="pass-carte pass-carte--highlight">
+              <p class="pass-badge">Le plus choisi</p>
+              <p class="pass-name">Pass 3 Jours</p>
+              <p class="pass-prix">12 000 <span>FCFA</span></p>
+              <p class="pass-desc">Accès aux trois soirées, sans réservation journalière.</p>
+              <a class="btn btn-whatsapp" id="wa-pass-3" href="#" target="_blank" rel="noopener">Réserver via WhatsApp</a>
+            </article>
+          </div>
+        
+      </section>
+
+        <section class="partenaires" id="partenaires">
+                
+                  <p class="section-eyebrow">Merci à eux</p>
+                  <h2 class="section-titre">Nos partenaires</h2>
+
+                  <div class="liste-partenaire" id="partnersRow">
+                    <p class="nom-partenaire">Akieni</p>
+                    <p class="nom-partenaire">Akieni academy</p>
+                  </div>
+                </div>
+              </section>
+
+              <section class="section" id="faq">
+          <div class="section-inner section-inner--narrow">
+            <p class="section-eyebrow">Questions fréquentes</p>
+            <h2 class="section-title">Avant de venir</h2>
+
+            <div class="accordion" id="accordion">
+              
+            </div>
+          </div>
+      </section>
+      <section class="section section--contact" id="contact">
+    
+        <p class="section-eyebrow">Une autre question ?</p>
+        <h2 class="section-title">Écrivez-nous</h2>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="champ">
+            <label for="f-name">Nom</label>
+            <input
+              type="text"
+              id="f-name"
+              name="name"
+              autocomplete="name"
+              required
+            />
+            <span class="error" id="err-name"></span>
+          </div>
+
+          <div class="champ">
+            <label for="f-phone">Téléphone</label>
+            <input
+              type="tel"
+              id="f-phone"
+              name="phone"
+              autocomplete="tel"
+              placeholder="06 xxx xx xx"
+              required
+            />
+            <span class="error" id="err-phone"></span>
+          </div>
+
+          <div class="champ">
+            <label for="f-message">Message</label>
+            <textarea
+              id="f-message"
+              name="message"
+              rows="4"
+              required
+            ></textarea>
+            <span class="error" id="err-message"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            Envoyer le message
+          </button>
+          <p class="form-success" id="formSuccess" role="status"></p>
+        </form>
+      </div>
+    </section>
+    <footer class="site-footer">
+      <div>
+        <p>Brazzaville · 11 — 13 Novembre 2026</p>
+        <p>
+          Festival sape & Lumière — projet pédagogique Akieni Academy.
+        </p>
+      </div>
+    </footer>
+    </main>
+  </body>
+  <script src="main.js"></script>
+</html>
