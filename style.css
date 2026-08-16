@@ -236,7 +236,7 @@ section {
   display: inline-block;
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   padding: 13px 26px;
   border-radius: 999px;
   border: 1px solid transparent;
@@ -450,13 +450,13 @@ section {
   margin: 0 0 6px;
 }
 .pass-prix {
-  font-size: 2.1rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--or);
   margin: 0 0 14px;
 }
 .pass-prix span {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 500;
   color: var(--belge-noir);
 }
