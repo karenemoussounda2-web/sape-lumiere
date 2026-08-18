@@ -384,6 +384,44 @@ section {
   font-size: 0.92rem;
 }
 /* ------------------------ */
+.filter-buttons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+.filter-btn {
+  display: inline-block;
+  background: var(--noir-3);
+  color: var(--belge-noir);
+  border: 1px solid rgba(246, 241, 228, 0.2);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 10px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+.filter-btn:hover {
+  background: var(--noir-2);
+  color: var(--belge);
+  border-color: rgba(246, 241, 228, 0.35);
+}
+.filter-btn.filter-active {
+  background: var(--or);
+  color: var(--noir);
+  border-color: var(--or);
+}
+.filter-btn.filter-active:hover {
+  background: #f0cd7e;
+  border-color: #f0cd7e;
+}
+
+/* ------------------------ */
 .lineup-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -425,7 +463,7 @@ section {
   background: var(--noir-3);
   border: 1px solid rgba(246, 241, 228, 0.08);
   border-radius: var(--radius);
-  padding: 30px 15px;
+  padding: 30px 10px;
   position: relative;
 }
 .pass-carte--highlight {
@@ -486,7 +524,9 @@ section {
   text-align: center;
   padding: 12px;
 }
-
+#mtn {
+  color: yellow;
+}
 /* -------------------------------------------------- */
 .accordion {
   display: flex;

@@ -123,7 +123,7 @@ primaryNav.querySelectorAll(".nav-link").forEach(function (link) {
 
 /* ---------- ---------- */
 
-const OPENING_DATE = new Date("2026-09-11T18:00:00+01:00");
+const OPENING_DATE = new Date("2026-09-25T18:00:00+01:00");
 
 const cdDays = document.getElementById("cd-days");
 const cdHours = document.getElementById("cd-hours");
@@ -226,7 +226,36 @@ tabs.forEach(function (tab) {
 });
 
 renderProgramme();
-// ---------------------------------------------
+
+// ---------- FILTRAGE ARTISTES/SAPEURS ----------
+const filterButtons = document.querySelectorAll(".filter-btn");
+const lineupCards = document.querySelectorAll(".artiste-carte");
+
+filterButtons.forEach(function (button) {
+  button.addEventListener("click", function () {
+    const filterValue = button.dataset.filter;
+
+    // Retirer la classe active de tous les boutons
+    filterButtons.forEach(function (btn) {
+      btn.classList.remove("filter-active");
+    });
+
+    // Ajouter la classe active au bouton cliqué
+    button.classList.add("filter-active");
+
+    // Filtrer les cartes
+    lineupCards.forEach(function (card) {
+      if (filterValue === "tous") {
+        card.style.display = "block";
+      } else {
+        const cardType = card.dataset.type;
+        card.style.display = cardType === filterValue ? "block" : "none";
+      }
+    });
+  });
+});
+
+// ---------- ----------
 function lienWhatsapp(passName) {
   const message =
     "Bonjour, je souhaite réserver un Pass " +
