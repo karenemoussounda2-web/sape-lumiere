@@ -100,16 +100,16 @@ const FAQ = [
 /* ---------- MENU ---------- */
 
 const menuToggle = document.getElementById("menuToggle");
-const primaryNav = document.getElementById("primaryNav");
+const liennav = document.getElementById("liennav");
 
 function closeMenu() {
-  primaryNav.classList.remove("is-open");
+  liennav.classList.remove("is-open");
   menuToggle.setAttribute("aria-expanded", "false");
   menuToggle.setAttribute("aria-label", "Ouvrir le menu");
 }
 
 menuToggle.addEventListener("click", function () {
-  const isOpen = primaryNav.classList.toggle("is-open");
+  const isOpen = liennav.classList.toggle("is-open");
   menuToggle.setAttribute("aria-expanded", String(isOpen));
   menuToggle.setAttribute(
     "aria-label",
@@ -117,7 +117,7 @@ menuToggle.addEventListener("click", function () {
   );
 });
 
-primaryNav.querySelectorAll(".nav-link").forEach(function (link) {
+liennav.querySelectorAll(".nav-link").forEach(function (link) {
   link.addEventListener("click", closeMenu);
 });
 

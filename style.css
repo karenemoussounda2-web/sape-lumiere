@@ -73,8 +73,7 @@ section {
   color: var(--or);
   margin: 0 2px;
 }
-
-.primary-nav {
+.lien-nav {
   display: flex;
   align-items: center;
   gap: 28px;
@@ -132,6 +131,9 @@ section {
   transform: translateY(-7px) rotate(-45deg);
 }
 
+/* -------------------------------------------------
+          MAIN                                    
+/* ---------------------------------------------------- */
 .hero {
   position: relative;
   overflow: hidden;
@@ -664,7 +666,7 @@ section {
   .menu-toggle {
     display: flex;
   }
-  .primary-nav {
+  .lien-nav {
     position: fixed;
     top: var(--header-h);
     left: 0;
@@ -682,10 +684,14 @@ section {
       transform 0.2s ease,
       opacity 0.2s ease;
   }
-  .primary-nav.is-open {
+  .lien-nav.is-open {
     transform: translateY(0);
     opacity: 1;
     pointer-events: auto;
+  }
+  .hero-rays {
+    width: 100%;
+    background-size: cover;
   }
   .nav-link {
     padding: 14px 2px;
