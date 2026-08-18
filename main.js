@@ -391,9 +391,29 @@ form.addEventListener("submit", function (e) {
   const allValid = results.every(Boolean);
 
   if (allValid) {
+    // Récupérer les valeurs du formulaire
+    const nom = champs.name.input.value.trim();
+    const message = champs.message.input.value.trim();
+
+    // Créer le message pour WhatsApp
+    const whatsappMessage = "Bonjour, je m'appelle " + nom + ". " + message;
+
+    // Créer le lien WhatsApp
+    const whatsappLink =
+      "https://wa.me/" +
+      WHATSAPP_NUMBER +
+      "?text=" +
+      encodeURIComponent(whatsappMessage);
+
+    // Afficher le message de succès
     formSuccess.textContent =
-      "Merci, votre message a bien été enregistré. Nous vous répondrons rapidement.";
-    form.reset();
+      "Merci, Votre message va être rediriger vers WhatsApp...";
+
+    // Rediriger vers WhatsApp après 500ms
+    setTimeout(function () {
+      window.open(whatsappLink, "_blank");
+      form.reset();
+    }, 500);
   } else {
     formSuccess.textContent = "";
     const firstInvalid = Object.keys(champs).find(function (key) {
